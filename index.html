@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Goddess首頁</title>
+<!--手機meta-->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--外部關聯公用的CSS文件-->
+<link rel="stylesheet" href="css/style.css">
+
+<!--外聯jquery文件-->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	//菜單功能
+	$(".menu-button").click(function(){
+		$(".m-nav").toggle();
+	})
+	//選項功能
+	$(".news-list").hide().eq(0).show();	
+	$(".news-tab li").click(function(){
+		$(".news-list").hide().eq($(this).index()).show();
+		//所有li都變成文本黑色 背景透明
+		$(".news-tab li")
+		.css("color","black")
+		.css("background-color","transparent");
+		//點擊的項目文本白色 背景綠色
+		$(this)
+		.css("color","#FDF0F0")
+		.css("background-color","white");
+	})
+})
+</script>
+
+<!-- Link Swiper's CSS 外部連接了swiper的CSS-->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!-- Demo styles -->
+<style>
+html,body {position: relative;}
+body {
+background: #fff;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #000;
+margin: 0;
+padding: 0;
+}
+
+.swiper {width: 100%;}
+
+.swiper-slide {
+overflow: hidden; /*把溢出的部分隱藏掉*/
+text-align: center;
+font-size: 18px;
+background: #fff;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;/*變成彈性盒子顯示*/
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;/*水平對齊*/
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;/*垂直對齊*/
+}
+
+/*媒體最大寬度值用％去算實際值，直接用％圖會整體照比例變小，不會只顯示中間*/
+/*窗口為1200px/圖1920px約為0.6，980px/0.6=img width*/
+@media(max-width:980px){
+	.swiper-slide img{width: 1600px;}
+}
+@media(max-width:780px){
+	.swiper-slide img{width: 1300px;}
+}
+@media(max-width:580px){
+	.swiper-slide img{width: 970px;}
+}
+@media(max-width:380px){
+	.swiper-slide img{width: 640px;}
+}
+</style>
+
+</head>
+
+
+<body>
+<!--頁頭-->
+<div class="header">	
+	<div class="menu-button">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<ul class="m-nav">
+		<li><a href="">商品分類</a></li>
+		<li><a href="">最新活動</a></li>
+		<li><a href="">人氣商品</a></li>
+		<li><a href="">關於我們</a></li>
+		<li><a href="">客服資訊</a></li>
+	</ul>
+
+	<div class="logo"><a href="index.html"><img src="img/logo.png"></a></div>
+
+	<div class="nav">
+		<a href="">商品分類</a>
+		<a href="">最新活動</a>
+		<a href="">人氣商品</a>
+		<a href="">關於我們</a>
+		<a href="">客服資訊</a>
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="icon-search">
+		<div class="shop-icon">
+			<a href="member.html"><img src="img/icon_member.png" alt=""></a>
+			<a href=""><img src="img/icon_collect.png" alt=""></a>
+			<a href=""><img src="img/icon_shopping-cart.png" alt=""></a>
+			<div class="clearfix"></div>
+		</div>
+
+		<div class="search">
+			<input class="search-bar" type="text" placeholder="Search..">
+			<button class="search-btn" type="submit"><img src="img/icon_search.png" alt=""></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>	
+</div>
+<!--廣告-->
+<!-- Swiper 結構位置 作品-->
+<div class="swiper mySwiper">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide"><img src="img/banner1.png"></div>
+		<div class="swiper-slide"><img src="img/banner2.png"></div>
+		<div class="swiper-slide"><img src="img/banner10.png"></div>
+		<div class="swiper-slide"><img src="img/banner13.png"></div>
+		<div class="swiper-slide"><img src="img/banner7.png"></div>
+	</div>
+</div>
+
+<!-- Swiper JS 外部連接JS文件-->
+<script src="js/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+  autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
+	},
+	loop: true,
+  });
+</script>
+
+<!--產品-->
+<div class="p-area">
+	<div class="p-card1">
+		<img class="w1" src="img/proudut 1.png" alt="">
+		<img class="line5" src="img/Line 5.png" alt="">
+		<ul class="p-list1">
+			<li class="brown">
+				<a href="">上衣&nbsp;半身帽T</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$490</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="brown">
+				<a href="">下身&nbsp;鬆緊綁帶棉褲</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$550</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="brown">
+				<a href="">鞋子&nbsp;尖頭高跟短靴</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$1200</a>
+				<div class="clearfix"></div>
+			</li>
+		</ul>
+	</div>
+	<div class="p-card2">
+		<ul class="p-list2">
+			<li class="brown">
+				<a href="">上衣&nbsp;寬版西裝外套</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$1580</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="brown">
+				<a href="">下身&nbsp;前開衩西裝褲</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$1300</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="brown">
+				<a href="">鞋子&nbsp;健走布鞋</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$1200</a>
+				<div class="clearfix"></div>
+			</li>
+		</ul>
+		<img class="line7" src="img/Line 7.png" alt="">
+		<img class="w2" src="img/proudut 2.png" alt="">
+	</div>
+	<div class="p-card3">
+		<img class="w3" src="img/proudut 3.png" alt="">
+		<img class="line6" src="img/Line 6.png" alt="">
+		<ul class="p-list3">
+			<li class="brown">
+				<a href="">上衣&nbsp;格紋西裝外套</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$990</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="brown">
+				<a href="">下身&nbsp;高腰割破牛仔褲</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$490</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="brown">
+				<a href="">鞋子&nbsp;綁帶平底美型鞋</a>
+				<div class="clearfix"></div>
+			</li>
+
+			<li class="gray">
+				<a href="">NT$890</a>
+				<div class="clearfix"></div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--頁腳-->
+<div class="footer-bg">
+	<div class="footer">
+		<div class="p-icon">
+			<img src="img/footer_p1.png" alt="">
+			<div id="icon">
+				<a id="icon_f" href=""><img src="img/icon_Facebook.png" alt=""></a>
+				<a id="icon_i" href=""><img src="img/icon_Instagram.png" alt=""></a>
+				<a id="icon_l" href=""><img src="img/icon_Line.png" alt=""></a>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<ul class="f-list">
+			<li class="f-list1">
+				<h3>關於我們</h3>
+				<p><a href="">品牌故事</a></p>
+				<p><a href="">門市資訊</a></p>
+				<p><a href="">隱私權及網站使用條款</a></p>
+			</li>
+			<li class="f-list2">
+				<h3>購物說明</h3>
+				<p><a href="">付款方式</a></p>
+				<p><a href="">運送方式</a></p>
+				<p><a href="">退換貨方式</a></p>
+			</li>
+			<li class="f-list_3">
+				<h3>客服資訊</h3>
+				<p><a href="">客服留言</a></p>
+				<p><a href="">常見問題</a></p>
+				<p><a href="">會員權益聲明</a></p>
+				<p><a href="">聯絡我們</a></p>
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+	<div class="cr">
+		9:00~12:00  13:00~18:00 (例假日及國定假日公休)<br>TEL : (02)2314-9999 | service@goddess.com<br><br>&copy;GODDESS ALL RIGHT RESERVED
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
